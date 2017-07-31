@@ -1,0 +1,40 @@
+﻿<section id="grid" class="animated fadeIn">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-grid">
+                <thead>
+                    <tr>
+                        <th>
+                            Código
+                        </th>
+                        <th>
+                            Nome
+                        </th>
+                        <th>
+                            Documento
+                        </th>
+                        <th>
+                            Telefone
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of ListagemModel">
+                        <td>
+                            {{item.Codigo}}
+                        </td>
+                        <td>
+                            {{item.Nome}}
+                        </td>
+                        <td>
+                            {{item.Documento}}
+                        </td>
+                        <td>
+                            {{item.Telefone}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

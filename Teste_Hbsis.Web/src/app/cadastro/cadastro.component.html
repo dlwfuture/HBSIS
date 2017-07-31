@@ -1,0 +1,50 @@
+﻿<section id="main" class="animated bounceInLeft">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="nome">NOME</label>
+                        <input type="text" id="nome" class="form-control sided-input"  [(ngModel)]="CadastroModel.Nome"  />
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="button-group">
+                            <div (click)="CadastroModel.IsCpf=true" [ngClass]="CadastroModel.IsCpf ? 'selected' : ''" class="btn btn-default btn-small-font ">
+                                CPF
+                            </div>
+                            <div (click)="CadastroModel.IsCpf=false" [ngClass]="!CadastroModel.IsCpf ? 'selected' : ''" class="btn btn-default btn-small-font">
+                                CNPJ
+                            </div>
+                        </div>
+                        <input type="text" [(ngModel)]="CadastroModel.Documento"  id="documento" class="form-control sided-input" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="telefone">TELEFONE</label>
+                        <input type="text" [(ngModel)]="CadastroModel.Telefone" id="telefone" class="form-control sided-input" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+
+                        <button (click)="Salvar()" class="btn btn-default right-button">SALVAR</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

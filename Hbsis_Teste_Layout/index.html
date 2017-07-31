@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Content/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/animate.min.css" />
+
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .container-fluid {
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+            border-bottom: 1px solid #95989a;
+            display: block;
+            text-align: center;
+            margin-top: -10px;
+        }
+
+        .cadastro-title {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-transform: uppercase;
+            font-size: 17px;
+            color: #979a9c !important;
+        }
+
+        section#main {
+            padding: 40px 5px;
+        }
+
+
+
+        .sided-input {
+            display: inline-block;
+            width: 80%;
+            right: 0;
+            clear: both;
+            position: absolute;
+            right: 15px;
+            display: inline-flex;
+        }
+
+        label {
+            margin-top: 8px;
+            color: #3eb9ad;
+        }
+
+        .button-group {
+            display: inline-block;
+            height: 20px;
+            margin-top: 8px;
+        }
+
+        input[type='text'] {
+            color: #333;
+        }
+
+            input[type='text']:focus {
+                border-color: #3eb9ad;
+                webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(200,200,200,.6);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(200,200,200,.6);
+            }
+
+        .btn-default, .btn-default:focus, .btn-default:active {
+            background-color: #3eb9ad !important;
+            color: #fff !important;
+            outline: none !important;
+            border: none !important;
+        }
+
+            .btn-default:hover {
+                transition: 0.2s all ease-in;
+                background-color: #000 !important;
+                color: #fff !important;
+            }
+
+        .right-button {
+            float: right;
+            clear: both;
+            display: block;
+        }
+
+        section#grid {
+            padding: 40px 3%;
+            border-top: 1px solid #95989a;
+        }
+
+        table thead {
+            background-color: #666;
+            color: #fff;
+        }
+
+        table tbody {
+            background-color: #eee;
+        }
+
+        table.table-grid tbody td {
+            border: 0.5px #ccc solid;
+        }
+
+        table.table-grid thead th {
+            border: 0.5px transparent;
+        }
+
+        .btn-small-font {
+            top: 0;
+            margin-top: -8px;
+            padding: 10px 12px;
+            font-size: 10px;
+            background-color: #666 !important;
+                color: #fff !important;
+        }
+
+            .btn-small-font.selected {
+                transition: 0.2s all ease-in;
+                background-color: #3eb9ad !important;
+            color: #fff !important;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <header class="animated fadeInDown">
+                    <h4 class="cadastro-title">Cadastro de Clientes</h4>
+                </header>
+                <section id="main" class="animated bounceInLeft">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="nome">NOME</label>
+                                        <input type="text" id="nome" class="form-control sided-input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="button-group">
+                                            <div class="btn btn-default btn-small-font selected">
+                                                CPF
+                                            </div>
+                                            <div class="btn btn-default btn-small-font">
+                                                CNPJ
+                                            </div>
+                                        </div>
+                                        <input type="text" id="nome" class="form-control sided-input" " />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="telefone">TELEFONE</label>
+                                        <input type="text" id="telefone" class="form-control sided-input" " />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <button class="btn btn-default right-button">SALVAR</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="grid" class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-grid">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Código
+                                        </th>
+                                        <th>
+                                            Nome
+                                        </th>
+                                        <th>
+                                            Documento
+                                        </th>
+                                        <th>
+                                            Telefone
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                            Daniel
+                                        </td>
+                                        <td>
+                                            376.040.898-28
+                                        </td>
+                                        <td>
+                                            (19) 3245-0892
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
